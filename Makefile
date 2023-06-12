@@ -4,7 +4,7 @@ BUILD_DIR_MAKEFILE ?= $(PWD)/build/Makefile
 CROSS ?= aarch64-none-linux-gnu-
 KERNEL ?= ../linux-apple
 
-obj-m += el3_demo.o
+obj-m += el3_demo_fib.o
 
 default: $(BUILD_DIR_MAKEFILE)
 	make ARCH=arm64 CROSS_COMPILE=$(CROSS) -C $(KERNEL) M=$(BUILD_DIR) src=$(PWD) modules
